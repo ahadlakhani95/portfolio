@@ -34,7 +34,7 @@
     border-radius: 9999px;
     transition: all 0.35s ease;
     pointer-events: none;
-   
+
 }
 
 /* ================= NAV LINKS ================= */
@@ -68,6 +68,7 @@
     .nav {
         gap: 4px;
     }
+
     .nav-link {
         padding: 9px 18px;
         font-size: 13px;
@@ -105,5 +106,71 @@
         white-space: nowrap;
         padding: 7px 12px;
         font-size: 11px;
+    }
+}
+
+/* ================= MOBILE MENU BUTTON ================= */
+
+.mobile_menu_btn {
+    display: none;
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    font-size: 25px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 1px;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+/* ================= MOBILE SIDE MENU ================= */
+
+.mobile_menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 250px;
+    height: 100vh;
+    background: #0f172a;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: all 0.4s ease;
+    z-index: 1100;
+}
+
+.mobile_menu.open {
+    left: 0;
+}
+
+.mobile_link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Close Button */
+.close_btn {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .desktop_nav {
+        display: none;
+    }
+
+    .mobile_menu_btn {
+        display: block;
     }
 }

@@ -40,6 +40,14 @@ body {
     display: flex;
     transform: translate(-50%, -50%);
     justify-content: center;
+}
 
+/* ================= DISABLE CURSOR ON MOBILE ================= */
 
+@media (max-width: 768px) {
+
+    .cursor-dot,
+    .curosr_outline {
+        display: none !important;
+    }
 }
