@@ -1,0 +1,43 @@
+.hero {
+    height: 400px;
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .hero_part1 {
+    height: 80%;
+    width: 40%;
+    padding:20px;
+    font-size: 20px;
+}
+
+.hero .hero_part2 {
+    height: 80%;
+    width: 30%;
+    padding:20px;
+}
+.hero_part2 .hero_img
+{
+    height:250px;
+    width:250px;
+    border-radius: 50%;
+    background-image: url(./../assets/ahad.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.hero_part2 .hero_img:hover
+{
+    background-image: url(./../assets/ahad2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.color {
+    color: rgb(1, 255, 56);
+}

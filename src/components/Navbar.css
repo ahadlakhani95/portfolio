@@ -1,0 +1,54 @@
+/* NAV CONTAINER */
+.nav_main
+{
+    height:auto;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.nav {
+    position: relative;
+    display: flex;
+    gap: 4px;
+    width: 35%;
+    /* gap-2 */
+    padding: 4px;
+    border: 1px solid black;
+    /* border-black/20 */
+    border-radius: 9999px;
+    /* rounded-full */
+    background: rgba(17, 4, 4, 0.164);
+    /* bg-white/50 */
+    backdrop-filter: blur(6px);
+    margin: 0px auto;
+    position: fixed;
+
+}
+
+/* MOVING PILL */
+.nav-pill {
+    position: absolute;
+    background: #1E2939;
+    /* bg-black/10 */
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    /* transition-all duration-300 */
+    pointer-events: none;
+}
+
+/* NAV LINKS */
+.nav-link {
+    position: relative;
+    z-index: 10;
+    padding: 10px 25px;
+    /* px-5 py-2 */
+    font-size: 14px;
+    /* text-sm */
+    font-weight: 500;
+    /* font-medium */
+    color: white;
+    /* text-black/50 */
+    text-decoration: none;
+    outline: none;
+    transition: color 0.2s ease;
+}
