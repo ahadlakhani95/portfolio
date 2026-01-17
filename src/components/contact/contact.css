@@ -3,7 +3,7 @@
 ========================= */
 .contact-section {
   width: 100%;
-  min-height: 100vh;
+  height: auto;
   padding: 20px 20px;
   background: radial-gradient(circle at top, #0f2a30, #081418);
   color: #ebe1e1;
