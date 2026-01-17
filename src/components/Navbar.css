@@ -1,54 +1,109 @@
-/* NAV CONTAINER */
-.nav_main
-{
-    height:auto;
-    width:100%;
+/* ================= NAV CONTAINER ================= */
+
+.nav_main {
+    width: 100%;
     display: flex;
     justify-content: center;
-}
-.nav {
-    position: relative;
-    display: flex;
-    gap: 4px;
-    width: 35%;
-    /* gap-2 */
-    padding: 4px;
-    border: 1px solid black;
-    /* border-black/20 */
-    border-radius: 9999px;
-    /* rounded-full */
-    background: rgba(17, 4, 4, 0.164);
-    /* bg-white/50 */
-    backdrop-filter: blur(6px);
-    margin: 0px auto;
     position: fixed;
-
+    top: 15px;
+    z-index: 1000;
 }
 
-/* MOVING PILL */
+/* ================= NAV BAR ================= */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    padding: 6px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.3s ease;
+}
+
+/* ================= MOVING PILL ================= */
+
 .nav-pill {
     position: absolute;
-    background: #1E2939;
-    /* bg-black/10 */
+    height: 42px;
+    background: linear-gradient(#1E2939);
     border-radius: 9999px;
-    transition: all 0.3s ease;
-    /* transition-all duration-300 */
+    transition: all 0.35s ease;
     pointer-events: none;
+   
 }
 
-/* NAV LINKS */
+/* ================= NAV LINKS ================= */
+
 .nav-link {
     position: relative;
     z-index: 10;
-    padding: 10px 25px;
-    /* px-5 py-2 */
+    padding: 10px 22px;
     font-size: 14px;
-    /* text-sm */
     font-weight: 500;
-    /* font-medium */
-    color: white;
-    /* text-black/50 */
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    outline: none;
-    transition: color 0.2s ease;
+    transition: all 0.25s ease;
+    border-radius: 9999px;
+}
+
+.nav-link:hover {
+    color: #fcfafa;
+}
+
+/* ================= ACTIVE LINK ================= */
+
+.nav-link.active {
+    color: #fcf9f9;
+    font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+    .nav {
+        gap: 4px;
+    }
+    .nav-link {
+        padding: 9px 18px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav_main {
+        top: auto;
+        bottom: 20px;
+    }
+
+    .nav {
+        padding: 8px;
+    }
+
+    .nav-link {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        max-width: 95%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-link {
+        white-space: nowrap;
+        padding: 7px 12px;
+        font-size: 11px;
+    }
 }

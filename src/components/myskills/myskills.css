@@ -3,61 +3,88 @@
 ========================= */
 .skills-section {
   min-height: 100vh;
-  padding: 100px 20px;
-  background-color: #0B181D;
+  padding: 120px 20px;
+  background: radial-gradient(circle at top, #0f2a30, #081418);
   color: #fff;
   text-align: center;
 }
 
 .skills-title {
-  font-size: 3rem;
-  margin-bottom: 60px;
+  font-size: 3.2rem;
+  margin-bottom: 70px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* =========================
    Grid
 ========================= */
 .skills-grid {
-  max-width: 1100px;
+  max-width: 1150px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 35px;
 }
 
 /* =========================
    Card
 ========================= */
 .skill-card {
-  padding: 30px 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 35px 25px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
 
   cursor: pointer;
-  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s ease;
+}
+
+/* Glass shine effect */
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
 }
 
 .skill-card:hover {
-  transform: translateY(-10px) scale(1.05);
+  transform: translateY(-14px) scale(1.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
 /* =========================
    Icon
 ========================= */
 .skill-icon {
-  font-size: 3.5rem;
+  font-size: 3.7rem;
   color: #aaa;
-  transition: color 0.4s ease, filter 0.4s ease;
+  transition: all 0.45s ease;
 }
 
 .skill-name {
   font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 /* =========================
@@ -67,84 +94,87 @@
 /* HTML */
 .skill-card[data-skill="HTML 5"]:hover .skill-icon {
   color: #e34c26;
-  filter: drop-shadow(0 0 10px rgba(227, 76, 38, 0.8));
+  filter: drop-shadow(0 0 14px rgba(227, 76, 38, 0.9));
 }
 
 /* CSS */
 .skill-card[data-skill="CSS"]:hover .skill-icon {
   color: #264de4;
-  filter: drop-shadow(0 0 10px rgba(38, 77, 228, 0.8));
+  filter: drop-shadow(0 0 14px rgba(38, 77, 228, 0.9));
 }
 
 /* JavaScript */
 .skill-card[data-skill="JavaScript"]:hover .skill-icon {
   color: #f7df1e;
-  filter: drop-shadow(0 0 10px rgba(247, 223, 30, 0.8));
-}
-
-/* TypeScript */
-.skill-card[data-skill="TypeScript"]:hover .skill-icon {
-  color: #3178c6;
-  filter: drop-shadow(0 0 10px rgba(49, 120, 198, 0.8));
+  filter: drop-shadow(0 0 14px rgba(247, 223, 30, 0.9));
 }
 
 /* React */
 .skill-card[data-skill="React.js"]:hover .skill-icon {
   color: #61dafb;
-  filter: drop-shadow(0 0 10px rgba(97, 218, 251, 0.8));
+  filter: drop-shadow(0 0 14px rgba(97, 218, 251, 0.9));
 }
 
 /* Next.js */
 .skill-card[data-skill="Next.js"]:hover .skill-icon {
   color: #ffffff;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
-}
-
-/* Tailwind */
-.skill-card[data-skill="Tailwind CSS"]:hover .skill-icon {
-  color: #38bdf8;
-  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.8));
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.9));
 }
 
 /* Node.js */
 .skill-card[data-skill="Node.js"]:hover .skill-icon {
   color: #3c873a;
-  filter: drop-shadow(0 0 10px rgba(60, 135, 58, 0.8));
+  filter: drop-shadow(0 0 14px rgba(60, 135, 58, 0.9));
 }
 
 /* Express.js */
 .skill-card[data-skill="Express.js"]:hover .skill-icon {
   color: #cccccc;
-  filter: drop-shadow(0 0 10px rgba(204, 204, 204, 0.8));
+  filter: drop-shadow(0 0 14px rgba(204, 204, 204, 0.9));
 }
 
 /* MongoDB */
 .skill-card[data-skill="MongoDB"]:hover .skill-icon {
   color: #47a248;
-  filter: drop-shadow(0 0 10px rgba(71, 162, 72, 0.8));
+  filter: drop-shadow(0 0 14px rgba(71, 162, 72, 0.9));
 }
 
 /* Git */
 .skill-card[data-skill="Git"]:hover .skill-icon {
   color: #f1502f;
-  filter: drop-shadow(0 0 10px rgba(241, 80, 47, 0.8));
+  filter: drop-shadow(0 0 14px rgba(241, 80, 47, 0.9));
 }
 
 /* GitHub */
 .skill-card[data-skill="GitHub"]:hover .skill-icon {
   color: #AD46FF;
-  
+  filter: drop-shadow(0 0 14px rgba(173, 70, 255, 0.9));
 }
 
 /* =========================
    Responsive
 ========================= */
+
+@media (max-width: 900px) {
+  .skills-title {
+    font-size: 2.6rem;
+  }
+
+  .skills-grid {
+    gap: 28px;
+  }
+}
+
 @media (max-width: 600px) {
   .skills-title {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 
   .skill-icon {
-    font-size: 3rem;
+    font-size: 3.1rem;
+  }
+
+  .skill-card {
+    padding: 28px 20px;
   }
 }

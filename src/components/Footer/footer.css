@@ -1,73 +1,99 @@
 .footer {
   position: relative;
   width: 100%;
-  padding: 20px 40px;
-  background: linear-gradient(to top, #000, #0d1117);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 25px 50px;
+  background: linear-gradient(to top, #000000, #0d1117, #101822);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* ================= CONTAINER ================= */
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Text */
+/* ================= TEXT ================= */
+
 .footer-text {
   color: #9aa4b2;
   font-size: 14px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
-/* Icons */
+/* ================= ICONS ================= */
+
 .footer-icons {
   display: flex;
-  gap: 18px;
+  gap: 22px;
 }
 
 .footer-icons a {
   color: #9aa4b2;
-  font-size: 18px;
-  transition: 0.3s ease;
+  font-size: 20px;
+  transition: all 0.35s ease;
 }
 
 .footer-icons a:hover {
-  color: #dacbcb;
-  transform: translateY(-3px);
+  color: #01ff38;
+  transform: translateY(-5px) scale(1.15);
+  text-shadow: 0 0 12px rgba(1, 255, 56, 0.7);
 }
 
-/* Scroll to top button */
+/* ================= SCROLL TO TOP ================= */
+
 .scroll-top {
   position: fixed;
-  bottom: 50px;
-  right: 30px;
-  height: 45px;
-  width: 45px;
+  bottom: 45px;
+  right: 35px;
+  height: 48px;
+  width: 48px;
   border-radius: 50%;
   border: none;
-  background: #ffffff;
+  background: linear-gradient(135deg, #01ff38, #00c92c);
   color: #000;
   cursor: pointer;
-  font-size: 16px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  transition: 0.3s ease;
+  font-size: 17px;
+  box-shadow: 0 0 25px rgba(1, 255, 56, 0.6);
+  transition: all 0.35s ease;
   z-index: 999;
 }
 
 .scroll-top:hover {
-  transform: translateY(-5px);
-  background: #e5e5e5;
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 0 35px rgba(1, 255, 56, 0.9);
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 22px 30px;
+  }
+
+  .footer-icons {
+    gap: 18px;
+  }
+}
+
 @media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 13px;
   }
 
   .scroll-top {
     right: 20px;
     bottom: 20px;
+    height: 45px;
+    width: 45px;
   }
 }

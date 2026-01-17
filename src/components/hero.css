@@ -1,4 +1,4 @@
-.hero {
+ .hero {
     height: 400px;
     width: 80%;
     margin: 0px auto;
@@ -11,32 +11,77 @@
 .hero .hero_part1 {
     height: 80%;
     width: 40%;
-    padding:20px;
+    padding: 20px;
     font-size: 20px;
 }
+
+/* ---------------- SOCIAL ICONS ---------------- */
+
+.hero_socials {
+    margin-top: 20px;
+    display: flex;
+    gap: 18px;
+}
+
+.social_icon {
+    font-size: 32px;
+    color: #f1eeee;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.social_icon:hover {
+    color: rgb(1, 255, 56);
+    transform: translateY(-5px) scale(1.15);
+    text-shadow: 0px 0px 10px rgba(1, 255, 56, 0.6);
+}
+
+/* ---------------- RESUME BUTTON ---------------- */
+
+.resume_btn {
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #f7f8f7, #fefffe);
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    
+}
+
+.resume_btn:hover {
+    background: linear-gradient(135deg, #00c92c, #01ff38);
+    transform: translateY(-4px) scale(1.05);
+   
+}
+
+/* ---------------- IMAGE SECTION ---------------- */
 
 .hero .hero_part2 {
     height: 80%;
     width: 30%;
-    padding:20px;
+    padding: 20px;
 }
-.hero_part2 .hero_img
-{
-    height:250px;
-    width:250px;
+
+.hero_part2 .hero_img {
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     background-image: url(./../assets/ahad.jpg);
     background-size: cover;
     background-position: center;
-
+    transition: transform 0.4s ease;
 }
-.hero_part2 .hero_img:hover
-{
+
+.hero_part2 .hero_img:hover {
     background-image: url(./../assets/ahad2.jpg);
-    background-size: cover;
-    background-position: center;
+    transform: scale(1.08);
 }
 
+/* ---------------- COLOR ---------------- */
 
 .color {
     color: rgb(1, 255, 56);
