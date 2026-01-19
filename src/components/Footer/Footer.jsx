@@ -24,13 +24,13 @@ const Footer = () => {
 
         {/* Right */}
         <div className="footer-icons">
-          <a href="#" aria-label="GitHub">
+          <a href="https://github.com/ahadlakhani95" aria-label="GitHub">
             <FaGithub size={24} />
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/ahad-lakhani-515141241/" aria-label="LinkedIn">
             <FaLinkedin size={24} />
           </a>
-          <a href="#" aria-label="Email">
+          <a href="mailto:ahadlakhani95@gmail.com" aria-label="Email">
             <MdEmail size={24} />
           </a>
         </div>

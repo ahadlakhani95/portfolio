@@ -4,7 +4,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Typewriter from './Typewriter';
 import img1 from './../assets/ahad.jpg'
-
+import pdf from './../assets/Ahad_Resume.pdf'
 const Hero = () => {
     return (
         <div id='home'>
@@ -17,19 +17,23 @@ const Hero = () => {
 
                     {/* Social Icons */}
                     <div className="hero_socials">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/ahadlakhani95" target="_blank" rel="noopener noreferrer">
                             <FaGithub className="social_icon" />
                         </a>
 
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/ahad-lakhani-515141241/" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin className="social_icon" />
                         </a>
                     </div>
 
                     {/* Resume Button */}
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href={pdf}
+                        download="Ahad_Resume.pdf"
+                    >
                         <button className="resume_btn">Download Resume</button>
                     </a>
+
                 </div>
 
                 <div className="hero_part2">

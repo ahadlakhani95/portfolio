@@ -1,6 +1,21 @@
 import "./contact.css";
+import Swal from "sweetalert2";
 
 export default function Contact() {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    Swal.fire({
+      title: "Message Sent!",
+      text: "Thank you for contacting me. I will get back to you soon.",
+      icon: "success",
+      confirmButtonText: "OK",
+    });
+
+    e.target.reset();
+  };
+
   return (
     <section className="contact-section" id="contact">
       <div className="contact-header">
@@ -8,7 +23,7 @@ export default function Contact() {
         <p>Let's work together or just say hi 👋</p>
       </div>
 
-      <form className="contact-form">
+      <form className="contact-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Your Name"
@@ -27,8 +42,10 @@ export default function Contact() {
           required
         ></textarea>
 
+        <button type="submit" className="button">
+          Send Message 🚀
+        </button>
       </form>
-      <button type="submit" className="button">Send Message 🚀</button>
     </section>
   );
 }
